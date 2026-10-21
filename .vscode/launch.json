@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Pigment: запуск",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}\\main.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONUTF8": "1"
+            }
+        },
+        {
+            "name": "Pigment: тесты",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-q"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "env": {
+                "QT_QPA_PLATFORM": "offscreen"
+            }
+        }
+    ]
+}
