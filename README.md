@@ -1,5 +1,9 @@
 # Pigment — Paint-студия на Python
 
+[![Latest release](https://img.shields.io/github/v/release/vvixter84-jpg/pigment-paint?style=flat-square&label=release)](https://github.com/vvixter84-jpg/pigment-paint/releases/latest)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![PyQt6](https://img.shields.io/badge/PyQt6-6.7-41CD52?style=flat-square&logo=qt&logoColor=white)](https://pypi.org/project/PyQt6/)
+
 Аналог Paint с современным тёмным интерфейсом в духе **Material 3**. Фигуры, текст и штрихи остаются редактируемыми объектами: их можно выделять, двигать, масштабировать, перекрашивать, заливать градиентом и менять порядок слоёв.
 
 ![Интерфейс Pigment](assets/screenshots/app.png)
@@ -44,7 +48,7 @@
 
 ## Установщик для Windows (один файл)
 
-**[`dist/PigmentSetup.exe`](dist/PigmentSetup.exe)** — один самодостаточный установщик. Python, Qt, шрифты и ресурсы уже внутри. ZIP-файлов и распаковки вручную нет.
+**[Скачать PigmentSetup.exe](https://github.com/vvixter84-jpg/pigment-paint/releases/latest/download/PigmentSetup.exe)** — один самодостаточный установщик. Python, Qt, шрифты и ресурсы уже внутри. ZIP-файлов и распаковки вручную нет.
 
 1. Скопируйте `PigmentSetup.exe` на **Рабочий стол** или в «Загрузки».
 2. Запустите его двойным кликом. Установка займёт несколько секунд и покажет окно прогресса.
@@ -74,7 +78,14 @@ build_installer.bat
 
 ## Запуск из исходников
 
-В папке проекта уже есть виртуальное окружение `.venv` с PyQt6.
+```bat
+git clone https://github.com/vvixter84-jpg/pigment-paint.git
+cd pigment-paint
+setup.bat
+run.bat
+```
+
+В папке проекта создаётся виртуальное окружение `.venv` с PyQt6.
 
 1. Дважды щёлкните **`run.bat`**.
 2. Если окружение отсутствует, запустите **`setup.bat`**, затем снова `run.bat`.
@@ -177,7 +188,7 @@ python main.py
 
 ```
 pigment-paint/
-├─ dist/PigmentSetup.exe   установщик: один файл, без TEMP и ZIP
+├─ dist/                   локальная сборка (установщик публикуется в Releases)
 ├─ main.py                 точка входа
 ├─ app/
 │  ├─ main_window.py       окно, меню, сохранение, экспорт
